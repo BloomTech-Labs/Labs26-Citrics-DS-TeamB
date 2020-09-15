@@ -8,17 +8,8 @@ router = APIRouter()
 @router.get('/cities/')
 async def cities():
     """
-    Visualize 'state' unemployment rate from [Federal Reserve Economic Data](https://fred.stlouisfed.org/) 📈
-    
-    ### Path Parameter
-    `'state'code`: The [USPS 2 letter abbreviation](https://en.wikipedia.org/wiki/List_of_U.S._'state'_and_territory_abbreviations#Table) 
-    (case insensitive) for any of the 50 'state's or the District of Columbia.
-
-    ### Response
-    JSON string to render with [react-plotly.js](https://plotly.com/javascript/react/) 
+    Returns list of cities and their states
     """
-
-    # Val'id'ate the 'state' code
     
     statecodes = [
             { 'id': 1, 'name': "Albany", 'state': "NY" },
