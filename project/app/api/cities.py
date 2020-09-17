@@ -39,6 +39,8 @@ async def cities():
             { 'id': 25, 'name': "Trenton", 'state': "NJ" },
             { 'id': 26, 'name': "Utica", 'state': "NY" },
             { 'id': 27, 'name': "Wilmington", 'state': "DW" },
-            { 'id': 28, 'name': "Youngstown", 'state': "OH" }
+            { 'id': 28, 'name': "Youngstown", 'state': "OH" },
+            { 'id': 29, 'name': "Youngstown", 'state': "NY" },
+            { 'id': 30, 'name': "Youngstown", 'state': "CA" }
 ]
     return {'cities':statecodes}
