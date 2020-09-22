@@ -37,20 +37,6 @@ We used the [Google Places API](https://developers.google.com/places/web-service
 ## Backend APIs
 See [Backend Documentation](https://github.com/Lambda-School-Labs/Labs26-Citrics-DS-TeamB) for more information on the APIs used by our Data Science team.
 
-# Installation Instructions
-Run the following in your shell of choice:
-
-    git clone https://github.com/Lambda-School-Labs/Labs26-Citrics-FE-TeamB
-    npm i
-    npm start
-You will then see the App running in your browser at [http://localhost:3000/](http://localhost:3000/)
-
-## Other Scripts
-
-
-    * build - creates a production-ready build
-    * test - run unit tests in __tests__ directory
-
 # Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
