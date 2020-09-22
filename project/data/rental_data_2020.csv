@@ -1,0 +1,101 @@
+city_id,city,state,city_state,fmr_0,fmr_1,fmr_2,fmr_3,fmr_4,areaname,countyname,fmr_pct_chg,fmr_dollar_chg
+0,Anchorage,AK,"Anchorage, AK",935,991,1305,1883,2291,"Anchorage, AK HUD Metro FMR Area",Anchorage Municipality,-0.006092899999999999,-8
+1,Chandler,AZ,"Chandler, AZ",847,958,1173,1676,1916,"Phoenix-Chandler-Glendale-Gilbert-Mesa-Scottsdale, AZ MSA",Maricopa County,0.093196645,100
+2,Gilbert,AZ,"Gilbert, AZ",847,958,1173,1676,1916,"Phoenix-Chandler-Glendale-Gilbert-Mesa-Scottsdale, AZ MSA",Maricopa County,0.093196645,100
+3,Glendale,AZ,"Glendale, AZ",847,958,1173,1676,1916,"Phoenix-Chandler-Glendale-Gilbert-Mesa-Scottsdale, AZ MSA",Maricopa County,0.093196645,100
+4,Mesa,AZ,"Mesa, AZ",847,958,1173,1676,1916,"Phoenix-Chandler-Glendale-Gilbert-Mesa-Scottsdale, AZ MSA",Maricopa County,0.093196645,100
+5,Phoenix,AZ,"Phoenix, AZ",847,958,1173,1676,1916,"Phoenix-Chandler-Glendale-Gilbert-Mesa-Scottsdale, AZ MSA",Maricopa County,0.093196645,100
+6,Scottsdale,AZ,"Scottsdale, AZ",847,958,1173,1676,1916,"Phoenix-Chandler-Glendale-Gilbert-Mesa-Scottsdale, AZ MSA",Maricopa County,0.093196645,100
+7,Tucson,AZ,"Tucson, AZ",618,721,949,1369,1618,"Tucson, AZ MSA",Pima County,0.0509413,46
+8,Anaheim,CA,"Anaheim, CA",1563,1785,2216,3098,3578,"Santa Ana-Anaheim-Irvine, CA HUD Metro FMR Area",Orange County,0.087874325,179
+9,Bakersfield,CA,"Bakersfield, CA",711,726,946,1365,1624,"Bakersfield, CA MSA",Kern County,0.0215983,20
+10,Fresno,CA,"Fresno, CA",691,787,980,1395,1621,"Fresno, CA MSA",Fresno County,0.025104599999999998,24
+11,Long Beach,CA,"Long Beach, CA",1279,1517,1956,2614,2857,"Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area",Los Angeles County,0.09212730300000001,165
+12,Los Angeles,CA,"Los Angeles, CA",1279,1517,1956,2614,2857,"Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area",Los Angeles County,0.09212730300000001,165
+13,Oakland,CA,"Oakland, CA",1488,1808,2239,3042,3720,"Oakland-Fremont, CA HUD Metro FMR Area",Alameda County,0.0531515,113
+14,Sacramento,CA,"Sacramento, CA",952,1072,1349,1946,2368,"Sacramento--Roseville--Arden-Arcade, CA HUD Metro FMR Area",El Dorado County,0.105737705,129
+15,San Diego,CA,"San Diego, CA",1404,1566,2037,2894,3576,"San Diego-Carlsbad, CA MSA",San Diego County,-0.01499,-31
+16,San Francisco,CA,"San Francisco, CA",2197,2720,3339,4365,4657,"San Francisco, CA HUD Metro FMR Area",Marin County,0.05331230000000001,169
+17,San Jose,CA,"San Jose, CA",2103,2458,2970,3943,4525,"San Jose-Sunnyvale-Santa Clara, CA HUD Metro FMR Area",Santa Clara County,0.046143,131
+18,Santa Ana,CA,"Santa Ana, CA",1563,1785,2216,3098,3578,"Santa Ana-Anaheim-Irvine, CA HUD Metro FMR Area",Orange County,0.087874325,179
+19,Aurora,CO,"Aurora, CO",1114,1260,1566,2163,2488,"Denver-Aurora-Lakewood, CO MSA",Adams County,0.0384615,58
+20,Colorado Springs,CO,"Colorado Springs, CO",743,897,1141,1646,2003,"Colorado Springs, CO HUD Metro FMR Area",El Paso County,0.072368421,77
+21,Denver,CO,"Denver, CO",1114,1260,1566,2163,2488,"Denver-Aurora-Lakewood, CO MSA",Adams County,0.0384615,58
+22,Washington,DC,"Washington, DC",1457,1500,1707,2215,2707,"Washington-Arlington-Alexandria, DC-VA-MD HUD Metro FMR Area",District of Columbia,0.0252252,42
+23,Fort Lauderdale,FL,"Fort Lauderdale, FL",1035,1208,1528,2204,2683,"Fort Lauderdale, FL HUD Metro FMR Area",Broward County,0.0581717,84
+24,Jacksonville,FL,"Jacksonville, FL",700,872,1059,1391,1777,"Jacksonville, FL HUD Metro FMR Area",Clay County,0.088386434,86
+25,Miami,FL,"Miami, FL",1084,1285,1625,2164,2621,"Miami-Miami Beach-Kendall, FL HUD Metro FMR Area",Miami-Dade County,0.11760660199999999,171
+26,Orlando,FL,"Orlando, FL",989,1064,1248,1636,1956,"Orlando-Kissimmee-Sanford, FL MSA",Lake County,0.0487395,58
+27,St. Petersburg,FL,"St. Petersburg, FL",935,981,1206,1575,1925,"Tampa-St. Petersburg-Clearwater, FL MSA",Hernando County,0.064430715,73
+28,Tallahassee,FL,"Tallahassee, FL",771,829,1019,1361,1478,"Tallahassee, FL HUD Metro FMR Area",Gadsden County,0.06478578900000001,62
+29,Tampa,FL,"Tampa, FL",935,981,1206,1575,1925,"Tampa-St. Petersburg-Clearwater, FL MSA",Hernando County,0.064430715,73
+30,Atlanta,GA,"Atlanta, GA",996,1025,1167,1489,1824,"Atlanta-Sandy Springs-Roswell, GA HUD Metro FMR Area",Barrow County,0.05515369999999999,61
+31,Augusta,GA,"Augusta, GA",689,722,848,1156,1489,"Augusta-Richmond County, GA-SC HUD Metro FMR Area",Burke County,0.0143541,12
+32,Honolulu,HI,"Honolulu, HI",1473,1640,2160,3116,3792,"Honolulu, HI MSA",Honolulu County,0.0449927,93
+33,Des Moines,IA,"Des Moines, IA",603,730,900,1215,1323,"Des Moines-West Des Moines, IA MSA",Dallas County,-0.010989,-10
+34,Boise,ID,"Boise, ID",613,748,941,1346,1548,"Boise, ID HUD Metro FMR Area",Ada County,0.07912844,69
+35,Chicago,IL,"Chicago, IL",956,1076,1248,1585,1888,"Chicago-Joliet-Naperville, IL HUD Metro FMR Area",Cook County,0.029702999999999997,36
+36,Indianapolis,IN,"Indianapolis, IN",674,778,946,1256,1439,"Indianapolis-Carmel, IN HUD Metro FMR Area",Boone County,0.030501099999999996,28
+37,Wichita,KS,"Wichita, KS",536,630,822,1121,1372,"Wichita, KS HUD Metro FMR Area",Butler County,0.0444727,35
+38,Lexington,KY,"Lexington, KY",597,678,858,1189,1496,"Lexington-Fayette, KY MSA",Bourbon County,-0.028312999999999998,-25
+39,Louisville,KY,"Louisville, KY",614,713,872,1174,1331,"Louisville, KY-IN HUD Metro FMR Area",Bullitt County,0.0222743,19
+40,Baton Rouge,LA,"Baton Rouge, LA",678,765,894,1145,1429,"Baton Rouge, LA HUD Metro FMR Area",Ascension Parish,-0.088685015,-87
+41,New Orleans,LA,"New Orleans, LA",779,908,1078,1396,1597,"New Orleans-Metairie, LA HUD Metro FMR Area",Jefferson Parish,0.06944444400000001,70
+42,Shreveport,LA,"Shreveport, LA",612,739,861,1077,1248,"Shreveport-Bossier City, LA HUD Metro FMR Area",Bossier Parish,0.0398551,33
+43,Boston,MA,"Boston, MA",1715,1900,2311,2880,3131,"Boston-Cambridge-Quincy, MA-NH HUD Metro FMR Area",Essex County,0.0533273,117
+44,Baltimore,MD,"Baltimore, MD",897,1105,1376,1781,2037,"Baltimore-Columbia-Towson, MD MSA",Anne Arundel County,0.025335299999999998,34
+45,Detroit,MI,"Detroit, MI",639,764,977,1266,1376,"Detroit-Warren-Livonia, MI HUD Metro FMR Area",Lapeer County,0.0103413,10
+46,Minneapolis,MN,"Minneapolis, MN",820,971,1214,1722,2025,"Minneapolis-St. Paul-Bloomington, MN-WI HUD Metro FMR Area",Anoka County,0.054735,63
+47,Kansas City,MO,"Kansas City, MO",678,813,978,1314,1490,"Kansas City, MO-KS HUD Metro FMR Area",Caldwell County,0.0262329,25
+48,St. Louis,MO,"St. Louis, MO",633,701,905,1185,1395,"St. Louis, MO-IL HUD Metro FMR Area",Sullivan part,-0.020562999999999998,-19
+49,Charlotte,NC,"Charlotte, NC",907,934,1063,1423,1828,"Charlotte-Concord-Gastonia, NC-SC HUD Metro FMR Area",Cabarrus County,0.0340467,35
+50,Durham,NC,"Durham, NC",919,934,1088,1461,1645,"Durham-Chapel Hill, NC HUD Metro FMR Area",Chatham County,0.0312796,33
+51,Greensboro,NC,"Greensboro, NC",686,728,838,1114,1288,"Greensboro-High Point, NC HUD Metro FMR Area",Guilford County,0.089726918,69
+52,Raleigh,NC,"Raleigh, NC",962,1022,1163,1482,1895,"Raleigh, NC MSA",Franklin County,0.07090239400000001,77
+53,Winston Salem,NC,"Winston Salem, NC",580,617,763,1028,1256,"Winston Salem, NC HUD Metro FMR Area",Davie County,0.0466392,34
+54,Lincoln,NE,"Lincoln, NE",621,667,865,1216,1483,"Lincoln, NE HUD Metro FMR Area",Lancaster County,0.074534161,60
+55,Omaha,NE,"Omaha, NE",650,762,946,1272,1419,"Omaha-Council Bluffs, NE-IA HUD Metro FMR Area",Cass County,0.020496200000000003,19
+56,Newark,NJ,"Newark, NJ",1034,1218,1483,1891,2236,"Newark, NJ HUD Metro FMR Area",Essex County,0.0248791,36
+57,Albuquerque,NM,"Albuquerque, NM",571,713,877,1265,1506,"Albuquerque, NM MSA",Bernalillo County,0.0,0
+58,Henderson,NV,"Henderson, NV",728,877,1080,1558,1882,"Las Vegas-Henderson-Paradise, NV MSA",Clark County,0.103166496,101
+59,Las Vegas,NV,"Las Vegas, NV",728,877,1080,1558,1882,"Las Vegas-Henderson-Paradise, NV MSA",Clark County,0.103166496,101
+60,Reno,NV,"Reno, NV",698,846,1071,1545,1880,"Reno, NV MSA",Storey County,0.0327869,34
+61,Buffalo,NY,"Buffalo, NY",674,703,843,1051,1190,"Buffalo-Cheektowaga-Niagara Falls, NY MSA",Erie County,0.00596659,5
+62,New York,NY,"New York, NY",1665,1714,1951,2472,2643,"New York, NY HUD Metro FMR Area",Bronx County,0.06553795700000001,120
+63,Rochester,NY,"Rochester, NY",668,775,972,1211,1317,"Rochester, NY HUD Metro FMR Area",Livingston County,0.022082,21
+64,Syracuse,NY,"Syracuse, NY",633,723,900,1127,1291,"Syracuse, NY MSA",Madison County,0.048951,42
+65,Akron,OH,"Akron, OH",557,659,847,1065,1147,"Akron, OH MSA",Portage County,0.045679000000000004,37
+66,Cincinnati,OH,"Cincinnati, OH",568,658,865,1185,1362,"Cincinnati, OH-KY-IN  HUD Metro FMR Area",Butler County,-0.021493,-19
+67,Cleveland,OH,"Cleveland, OH",585,691,849,1119,1174,"Cleveland-Elyria, OH MSA",Cuyahoga County,0.0155502,13
+68,Columbus,OH,"Columbus, OH",677,794,992,1262,1449,"Columbus, OH HUD Metro FMR Area",Delaware County,0.0365726,35
+69,Oklahoma City,OK,"Oklahoma City, OK",684,724,906,1231,1506,"Oklahoma City, OK HUD Metro FMR Area",Canadian County,0.0449827,39
+70,Tulsa,OK,"Tulsa, OK",597,696,898,1199,1374,"Tulsa, OK HUD Metro FMR Area",Creek County,0.038150300000000005,33
+71,Portland,OR,"Portland, OR",1192,1289,1495,2157,2625,"Portland-Vancouver-Hillsboro, OR-WA MSA",Clackamas County,0.037474,54
+72,Philadelphia,PA,"Philadelphia, PA",864,1013,1226,1528,1754,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD MSA",Bucks County,0.0216667,26
+73,Pittsburgh,PA,"Pittsburgh, PA",661,727,890,1137,1248,"Pittsburgh, PA HUD Metro FMR Area",Allegheny County,-0.0066964,-6
+74,Providence,RI,"Providence, RI",794,898,1075,1340,1591,"Providence-Fall River, RI-MA HUD Metro FMR Area",Bristol County,0.0141509,15
+75,Chattanooga,TN,"Chattanooga, TN",599,686,832,1081,1305,"Chattanooga, TN-GA MSA",Hamilton County,-0.01771,-15
+76,Knoxville,TN,"Knoxville, TN",624,742,915,1198,1476,"Knoxville, TN HUD Metro FMR Area",Anderson County,0.070175439,60
+77,Memphis,TN,"Memphis, TN",665,755,884,1203,1374,"Memphis, TN-MS-AR HUD Metro FMR Area",Fayette County,0.010285700000000002,9
+78,Nashville,TN,"Nashville, TN",898,957,1136,1484,1822,"Nashville-Davidson--Murfreesboro--Franklin, TN HUD Metro FMR Area",Cannon County,0.0299184,33
+79,Arlington,TX,"Arlington, TX",838,945,1165,1579,1980,"Fort Worth-Arlington, TX HUD Metro FMR Area",Johnson County,0.09082397,97
+80,Austin,TX,"Austin, TX",988,1134,1356,1763,2128,"Austin-Round Rock, TX MSA",Bastrop County,0.031178700000000004,41
+81,Corpus Christi,TX,"Corpus Christi, TX",744,789,999,1336,1553,"Corpus Christi, TX HUD Metro FMR Area",Nueces County,-0.1,-111
+82,Dallas,TX,"Dallas, TX",957,1093,1314,1727,2262,"Dallas-Plano, TX HUD Metro FMR Area",Collin County,0.09408826,113
+83,El Paso,TX,"El Paso, TX",539,677,827,1173,1408,"El Paso, TX HUD Metro FMR Area",El Paso County,-0.0048135,-4
+84,Fort Worth,TX,"Fort Worth, TX",838,945,1165,1579,1980,"Fort Worth-Arlington, TX HUD Metro FMR Area",Johnson County,0.09082397,97
+85,Houston,TX,"Houston, TX",826,908,1096,1485,1878,"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area",Chambers County,-0.0072464,-8
+86,Irving,TX,"Irving, TX",957,1093,1314,1727,2262,"Dallas-Irving, TX HUD Metro FMR Area",Dallas County,0.09408826,113
+87,Laredo,TX,"Laredo, TX",683,687,862,1132,1293,"Laredo, TX MSA",Webb County,0.00583431,5
+88,Lubbock,TX,"Lubbock, TX",613,708,858,1238,1506,"Lubbock, TX HUD Metro FMR Area",Crosby County,-0.025,-22
+89,Plano,TX,"Plano, TX",957,1093,1314,1727,2262,"Dallas-Plano, TX HUD Metro FMR Area",Collin County,0.09408826,113
+90,San Antonio,TX,"San Antonio, TX",702,851,1051,1372,1691,"San Antonio-New Braunfels, TX HUD Metro FMR Area",Bandera County,0.0009523810000000001,1
+91,Salt Lake City,UT,"Salt Lake City, UT",790,964,1176,1649,1870,"Salt Lake City, UT HUD Metro FMR Area",Salt Lake County,0.093953488,101
+92,Chesapeake,VA,"Chesapeake, VA",952,958,1136,1603,1994,"Chesapeake-Virginia Beach-Norfolk-Newport News, VA-NC HUD Metro FMR Area",Chesapeake city,0.0289855,32
+93,Norfolk,VA,"Norfolk, VA",952,958,1136,1603,1994,"Virginia Beach-Norfolk-Newport News, VA-NC HUD Metro FMR Area",Gloucester County,0.0289855,32
+94,Richmond,VA,"Richmond, VA",899,932,1061,1410,1686,"Richmond, VA MSA",Amelia County,-0.0056232,-6
+95,Virginia Beach,VA,"Virginia Beach, VA",952,958,1136,1603,1994,"Virginia Beach-Norfolk-Newport News, VA-NC HUD Metro FMR Area",Gloucester County,0.0289855,32
+96,Seattle,WA,"Seattle, WA",1627,1741,2099,2993,3524,"Seattle-Bellevue, WA HUD Metro FMR Area",King County,0.105318589,200
+97,Spokane,WA,"Spokane, WA",597,696,910,1305,1551,"Spokane, WA HUD Metro FMR Area",Spokane County,0.0282486,25
+98,Madison,WI,"Madison, WI",861,1015,1186,1635,1972,"Madison, WI HUD Metro FMR Area",Dane County,0.085086917,93
+99,Milwaukee,WI,"Milwaukee, WI",628,761,922,1177,1303,"Milwaukee-Waukesha-West Allis, WI MSA",Milwaukee County,0.0043573,4
