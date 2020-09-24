@@ -5,7 +5,7 @@ import os
 
 router = APIRouter()
 
-DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "2018_city_unemployment.csv")
+DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "2020_city_unemployment.csv")
 DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "6yr_city_unemployment_data.csv")
 
 @router.get('/unemployment/{city_id}')
