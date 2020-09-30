@@ -24,6 +24,11 @@ async def weather(city_id: int):
     dataframe = df[df['city_id']==city_id]
     rt_data = dataframe.to_numpy()
 
+    rt_data_dict['id'] = rt_data[0][0]
+    rt_data_dict['city'] = rt_data[0][1]
+    rt_data_dict['state'] = rt_data[0][2]
+    rt_data_dict['city_state'] = rt_data[0][3]
+
     rt_data_dict['summer_maxtempF_mean'] = rt_data[0][4]
     rt_data_dict['winter_mintempF_mean'] = rt_data[0][8]
     rt_data_dict['summer_humidity_mean'] = rt_data[0][6]
