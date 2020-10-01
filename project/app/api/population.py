@@ -5,8 +5,8 @@ import os
 
 router = APIRouter()
 
-DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "current_pop_data_updated.csv")
-DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "historical_pop_data_updated.csv")
+DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "current_pop_data_final.csv")
+DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "historical_pop_data_final.csv")
 
 @router.get('/population/{city_id}')
 async def pop_to_dict(city_id: int):
