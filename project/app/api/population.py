@@ -5,8 +5,8 @@ import os
 
 router = APIRouter()
 
-DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "100city_population_data_2018.csv")
-DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "9yr_city_pop_data.csv")
+DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "current_pop_data_final.csv")
+DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "historical_pop_data_final.csv")
 
 @router.get('/population/{city_id}')
 async def pop_to_dict(city_id: int):
@@ -28,14 +28,16 @@ async def pop_to_dict(city_id: int):
     rt_data = dataframe.to_numpy()
     
     rt_data_dict["total_pop"] = rt_data[0][4]
-    rt_data_dict["male_pop"] = rt_data[0][5]
-    rt_data_dict["female_pop"] = rt_data[0][6]
-    rt_data_dict["age_under_20"] = rt_data[0][7]
-    rt_data_dict["age_20-29"] = rt_data[0][8]
-    rt_data_dict["age_30-39"] = rt_data[0][9]
-    rt_data_dict["age_40-49"] = rt_data[0][10]
-    rt_data_dict["age_50-59"] = rt_data[0][11]
-    rt_data_dict["age_above_60"] = rt_data[0][12]
+    rt_data_dict["land_area"] = rt_data[0][5]
+    rt_data_dict["pop_density"] = rt_data[0][6]
+    rt_data_dict["male_pop"] = rt_data[0][7]
+    rt_data_dict["female_pop"] = rt_data[0][8]
+    rt_data_dict["age_under_20"] = rt_data[0][9]
+    rt_data_dict["age_20-29"] = rt_data[0][10]
+    rt_data_dict["age_30-39"] = rt_data[0][11]
+    rt_data_dict["age_40-49"] = rt_data[0][12]
+    rt_data_dict["age_50-59"] = rt_data[0][13]
+    rt_data_dict["age_above_60"] = rt_data[0][14]
     
     rt_dict["data"] = rt_data_dict 
     rt_dict["viz"] = citypopviz(city=rt_data[0][1], state=rt_data[0][2])
@@ -47,10 +49,10 @@ def citypopviz(city, state,metric = 'total_pop'):
 
     ### Query Parameters:
 
-    - `metric`: 'total_pop', 'male_pop', 'female_pop', 'age_under_20',
-    'age_20-29', 'age_30-39', 'age_40-49', 'age_50-59', or 'age_above_60';
-    default='total_pop',case sensitive, total/male/female pop in thousands,
-    age demographics in percentages
+    - `metric`: 'total_pop', 'land_area', 'pop_density', 'male_pop', 'female_pop',
+    'age_under_20', 'age_20-29', 'age_30-39', 'age_40-49', 'age_50-59', or 'age_above_60';
+    default='total_pop',case sensitive, total/male/female pop in thousands, land area
+    in sq mi, pop_density in person/sqmi, age demographics in percentages
 
     - `city`: [city name], case sensitive(ex: Birmingham)
 
