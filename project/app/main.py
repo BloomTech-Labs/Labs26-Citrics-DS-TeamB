@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from app.api import  cities, jobs, current_city_metrics,predict,viz
+from app.api import  cities, jobs, current_city_metrics, predict, viz
 
 app = FastAPI(
     title='CITRICS-TEAM-B DS API',
