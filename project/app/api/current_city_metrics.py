@@ -64,8 +64,8 @@ async def metrics_to_dict(city_id: int):
     rt_data_dict["total_days_rained"] = rt_data[0][33]
     
     rt_dict["data"] = rt_data_dict 
-    rt_dict["viz"] = citypopviz(city=rt_data[0][1], state=rt_data[0][2])
-    rt_dict["viz"] = unemploymentviz(city=rt_data[0][1], state=rt_data[0][2])
+    rt_dict["viz_pop"] = citypopviz(city=rt_data[0][1], state=rt_data[0][2])
+    rt_dict["viz_unemp"] = unemploymentviz(city=rt_data[0][1], state=rt_data[0][2])
     return rt_dict
 
 def citypopviz(city, state,metric = 'total_pop'):
