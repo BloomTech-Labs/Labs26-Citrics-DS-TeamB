@@ -21,7 +21,7 @@ async def pop_tse(city_id: int, metric: str):
 
     - `metric`: 'total_pop', 'land_area', 'pop_density', 'male_pop', 'female_pop',
     'age_under_20', 'age_20-29', 'age_30-39', 'age_40-49', 'age_50-59', or 'age_above_60';
-    default='total_pop',case sensitive, total/male/female pop in thousands, land area
+    case sensitive, total/male/female pop in thousands, land area
     in sq mi, pop_density in person/sqmi, age demographics in percentages
 
     ### Response
