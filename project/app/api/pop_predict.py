@@ -43,7 +43,7 @@ async def pop_tse(city_id: int):
 
 def pop_dens_tse(city_id: int):
     """
-    Return time series estimates for total population over the next 5 years
+    Return time series estimates for population density over the next 5 years
 
     ### Query Parameters: 
 
