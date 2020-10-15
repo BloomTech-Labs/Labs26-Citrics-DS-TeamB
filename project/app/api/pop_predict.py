@@ -81,7 +81,6 @@ def tot_pop_tse_viz(city_id: int):
     dataframe = df[df['city_id']==city_id]
     dataframe = dataframe[['year', 'total_pop']]
     dataframe.columns = ['ds', 'y']
-    dataframe.columns = ['ds', 'y']
     dataframe['ds'] = pd.to_datetime(dataframe['ds'], format='%Y')
 
     m = Prophet()
@@ -105,7 +104,6 @@ def pop_dens_tse_viz(city_id: int):
     df = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
     dataframe = df[df['city_id']==city_id]
     dataframe = dataframe[['year', 'pop_density']]
-    dataframe.columns = ['ds', 'y']
     dataframe.columns = ['ds', 'y']
     dataframe['ds'] = pd.to_datetime(dataframe['ds'], format='%Y')
 
