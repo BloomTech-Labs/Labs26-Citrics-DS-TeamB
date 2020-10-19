@@ -78,7 +78,7 @@ async def cities(rooms : Optional[str] = None,
         condition.append(cond_weather)
     
     #construct the condition str
-    print(len(condition))
+    #print(len(condition))
     
     if (len(condition) > 0 ):
         for cond in condition:
