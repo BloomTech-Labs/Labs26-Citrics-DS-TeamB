@@ -11,7 +11,7 @@ app = FastAPI(
     docs_url='/',
 )
 
-# app.include_router(predict.router)
+app.include_router(predict.router)
 # app.include_router(viz.router)
 app.include_router(cities.router)
 app.include_router(jobs.router)
