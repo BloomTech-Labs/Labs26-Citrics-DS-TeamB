@@ -23,18 +23,18 @@ async def rental_viz_to_dict(city_id: int):
     dataframe = df[df['city_id']==city_id]
     rt_data = dataframe.to_numpy()
     
-    rt_data_dict['id'] = rt_data[0][1]
-    rt_data_dict['city'] = rt_data[0][2]
-    rt_data_dict['state'] = rt_data[0][3]
-    rt_data_dict['city_state'] = rt_data[0][4]
+    rt_data_dict['id'] = rt_data[0][0]
+    rt_data_dict['city'] = rt_data[0][1]
+    rt_data_dict['state'] = rt_data[0][2]
+    rt_data_dict['city_state'] = rt_data[0][3]
     rt_dict['data'] = rt_data_dict
     rt_dict['viz'] = rt_data_dict_viz
 
-    rt_data_dict_viz["studio"] = studio_rental_viz(city_id=rt_data[0][1])
-    rt_data_dict_viz["1br"] = one_bed_viz(city_id=rt_data[0][1])
-    rt_data_dict_viz["2br"] = two_bed_viz(city_id=rt_data[0][1])
-    rt_data_dict_viz["3br"] = three_bed_viz(city_id=rt_data[0][1])
-    rt_data_dict_viz["4br"] = four_bed_viz(city_id=rt_data[0][1])
+    rt_data_dict_viz["studio"] = studio_rental_viz(city_id)
+    rt_data_dict_viz["1br"] = one_bed_viz(city_id)
+    rt_data_dict_viz["2br"] = two_bed_viz(city_id)
+    rt_data_dict_viz["3br"] = three_bed_viz(city_id)
+    rt_data_dict_viz["4br"] = four_bed_viz(city_id)
 
     return rt_dict
 
