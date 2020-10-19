@@ -22,7 +22,7 @@ class Item(BaseModel):
     weather_min : Optional[int] = None,
     weather_max : Optional[int] = None
 
-@router.get('/cities{rooms,pop_min,pop_max,rent_min,rent_max,weather_min,weather_max}')
+@router.get('/cities')
 async def cities(rooms : Optional[str] = None,
                 pop_min : Optional[int] = None,
                 pop_max : Optional[int] = None,
@@ -33,14 +33,7 @@ async def cities(rooms : Optional[str] = None,
     """
     Returns list of id, cities name , their states and city_state in one string 
     """
-    
-   # statecodes = [
-   #        { 'id': 1, 'name': "Albany", 'state': "NY" },
-   #        { 'id': 2, 'name': "Allegheny", 'state': "PA" },
-   #        { 'id': 3, 'name': "Brooklyn", 'state': "NY" }
-   # ]
-
-
+   
     url =os.path.join(os.path.dirname(__file__), "..", "..", "data", "current_city_metrics.csv")
     df = pd.read_csv(url)
     condition=[]
