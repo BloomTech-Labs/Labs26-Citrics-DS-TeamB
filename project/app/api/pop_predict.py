@@ -26,16 +26,13 @@ async def pop_tse(city_id: int):
     rt_dict = {}
     rt_data_dict = {}
     
-    df1 = pd.read_csv(DATA_FILEPATH2, encoding='utf-8')
-    df2 = pd.read_csv(DATA_FILEPATH3, encoding='utf-8')
-    dataframe1 = df1[df1['city_id']==city_id]
-    dataframe2 = df2[df2['city_id']==city_id]
-    rt_data1 = dataframe1.to_numpy()
-    rt_data2 = dataframe2.to_numpy()
-    rt_data_dict["city_id"] = rt_data1[0][0]
-    rt_data_dict["city"] = rt_data1[0][1]
-    rt_data_dict["state"] = rt_data1[0][2]
-    rt_data_dict["city_state"] = rt_data1[0][3]
+    df = pd.read_csv(DATA_FILEPATH2, encoding='utf-8')
+    dataframe = df[df['city_id']==city_id]
+    rt_data = dataframe.to_numpy()
+    rt_data_dict["city_id"] = rt_data[0][0]
+    rt_data_dict["city"] = rt_data[0][1]
+    rt_data_dict["state"] = rt_data[0][2]
+    rt_data_dict["city_state"] = rt_data[0][3]
     
     rt_dict["data"] = {"data":rt_data_dict}
     rt_dict["viz"] = {"total_pop":tot_pop_tse_viz(city_id=rt_data1[0][0]),
