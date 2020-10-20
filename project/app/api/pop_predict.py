@@ -36,13 +36,6 @@ async def pop_tse(city_id: int):
     rt_data_dict["city"] = rt_data1[0][1]
     rt_data_dict["state"] = rt_data1[0][2]
     rt_data_dict["city_state"] = rt_data1[0][3]
-    rt_data_dict["year"] = rt_data1[0][8]
-    rt_data_dict["tot_pop_estimate_lower"] = rt_data1[0][6]
-    rt_data_dict["pop_dens_estimate_lower"] = rt_data2[0][6]
-    rt_data_dict["tot_pop_estimate"] = rt_data1[0][5]
-    rt_data_dict["pop_dens_estimate"] = rt_data2[0][5]
-    rt_data_dict["tot_pop_estimate_higher"] = rt_data1[0][7]
-    rt_data_dict["pop_dens_estimate_higher"] = rt_data2[0][7]
     
     rt_dict["data"] = {"data":rt_data_dict}
     rt_dict["viz"] = {"total_pop":tot_pop_tse_viz(city_id=rt_data1[0][0]),
