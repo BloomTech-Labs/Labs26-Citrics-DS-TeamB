@@ -2,15 +2,16 @@ from fastapi import APIRouter, HTTPException
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from fbprophet import Prophet
-from fbprophet.plot import plot_plotly, plot_components_plotly
+import plotly.graph_objects as go
 import os
 
 router = APIRouter()
 
 DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "historical_pop_complete.csv")
+DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "total_pop_predict.csv")
+DATA_FILEPATH3 = os.path.join(os.path.dirname(__file__), "..", "..","data", "pop_density_predict.csv")
 
-@router.post('/pop_predict')
+@router.get('/pop_predict')
 async def pop_tse(city_id: int):
     """
     Return time series estimates for total population over the next 5 years
@@ -23,49 +24,31 @@ async def pop_tse(city_id: int):
     Dictionary object 
     """
     rt_dict = {}
-    df = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
-    dataframe = df[df['city_id']==city_id]
-    dataframe = dataframe[['year', 'total_pop']]
-    dataframe.columns = ['ds', 'y']
-    dataframe['ds'] = pd.to_datetime(dataframe['ds'], format='%Y')
-
-    m = Prophet()
-    m.fit(dataframe)
-    future = m.make_future_dataframe(periods=5, freq= 'y')
-    forecast = m.predict(future)
-    data = forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']]
-    rt_data = data.to_json(orient='records', date_format='iso')
-    rt_dict["data"] = {"total_pop":rt_data,
-                       "pop_density":pop_dens_tse(city_id=city_id)}
-    rt_dict["viz"] = {"total_pop":tot_pop_tse_viz(city_id=city_id),
-                      "pop_density":pop_dens_tse_viz(city_id=city_id)}
+    rt_data_dict = {}
+    
+    df1 = pd.read_csv(DATA_FILEPATH2, encoding='utf-8')
+    df2 = pd.read_csv(DATA_FILEPATH3, encoding='utf-8')
+    dataframe1 = df1[df1['city_id']==city_id]
+    dataframe2 = df2[df2['city_id']==city_id]
+    rt_data1 = dataframe1.to_numpy()
+    rt_data2 = dataframe2.to_numpy()
+    rt_data_dict["city_id"] = rt_data1[0][0]
+    rt_data_dict["city"] = rt_data1[0][1]
+    rt_data_dict["state"] = rt_data1[0][2]
+    rt_data_dict["city_state"] = rt_data1[0][3]
+    rt_data_dict["year"] = rt_data1[0][8]
+    rt_data_dict["tot_pop_estimate_lower"] = rt_data1[0][6]
+    rt_data_dict["pop_dens_estimate_lower"] = rt_data2[0][6]
+    rt_data_dict["tot_pop_estimate"] = rt_data1[0][5]
+    rt_data_dict["pop_dens_estimate"] = rt_data2[0][5]
+    rt_data_dict["tot_pop_estimate_higher"] = rt_data1[0][7]
+    rt_data_dict["pop_dens_estimate_higher"] = rt_data2[0][7]
+    
+    rt_dict["data"] = {"data":rt_data_dict}
+    rt_dict["viz"] = {"total_pop":tot_pop_tse_viz(city_id=rt_data1[0][0]),
+                      "pop_density":pop_dens_tse_viz(city_id=rt_data1[0][0])}
     return rt_dict
 
-def pop_dens_tse(city_id: int):
-    """
-    Return time series estimates for population density over the next 5 years
-
-    ### Query Parameters: 
-
-    - `city_id`: [city_id], unique numeric mapping (ex: 0 returns Anchorage, AK)
-
-    ### Response
-    Dictionary object 
-    """
-    df = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
-    dataframe = df[df['city_id']==city_id]
-    dataframe = dataframe[['year', 'pop_density']]
-    dataframe.columns = ['ds', 'y']
-    dataframe['ds'] = pd.to_datetime(dataframe['ds'], format='%Y')
-
-    m = Prophet()
-    m.fit(dataframe)
-    future = m.make_future_dataframe(periods=5, freq= 'y')
-    forecast = m.predict(future)
-    data = forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']]
-    rt_data = data.to_json(orient='records', date_format='iso')
-    return rt_data
-    
 def tot_pop_tse_viz(city_id: int):
     """
     Visualize future total population estimates for 2020-2024
@@ -77,17 +60,41 @@ def tot_pop_tse_viz(city_id: int):
     ### Response
     JSON string to render with react-plotly.js
     """
-    df = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
-    dataframe = df[df['city_id']==city_id]
-    dataframe = dataframe[['year', 'total_pop']]
-    dataframe.columns = ['ds', 'y']
-    dataframe['ds'] = pd.to_datetime(dataframe['ds'], format='%Y')
+    df = pd.read_csv(DATA_FILEPATH2, encoding='utf-8')
+    df2 = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
+    df = df.loc[df['city_id'] == city_id]
+    df2 = df2.loc[df2['city_id'] == city_id]
+    x = df['year'].tolist()
+    y = df2['total_pop'].tolist()
+    y_hat = df['yhat'].tolist()
+    y_upper = df['yhat_upper'].tolist()
+    y_lower = df['yhat_lower'].tolist()
 
-    m = Prophet()
-    m.fit(dataframe)
-    future = m.make_future_dataframe(periods=5, freq= 'y')
-    forecast = m.predict(future)
-    fig = plot_plotly(m, forecast)
+    fig = go.Figure([
+        go.Scatter(
+            x=x,
+            y=y,
+            line=dict(color='rgb(0,151,223)'),
+            mode='lines',
+            showlegend=False
+        ),
+        go.Scatter(
+            x=x,
+            y=y_hat,
+            line=dict(color='rgb(0,151,223)'),
+            mode='lines',
+            showlegend=False
+        ),
+        go.Scatter(
+            x=x+x[::-1], # x, then x reversed
+            y=y_upper+y_lower[::-1], # upper, then lower reversed
+            fill='toself',
+            fillcolor='rgba(0,151,223,0.2)',
+            line=dict(color='rgba(255,255,255,0)'),
+            hoverinfo="skip",
+            showlegend=False
+        )
+    ])
     return fig.to_json()
 
 def pop_dens_tse_viz(city_id: int):
@@ -101,19 +108,39 @@ def pop_dens_tse_viz(city_id: int):
     ### Response
     JSON string to render with react-plotly.js
     """
-    df = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
-    dataframe = df[df['city_id']==city_id]
-    dataframe = dataframe[['year', 'pop_density']]
-    dataframe.columns = ['ds', 'y']
-    dataframe['ds'] = pd.to_datetime(dataframe['ds'], format='%Y')
+    df = pd.read_csv(DATA_FILEPATH3, encoding='utf-8')
+    df2 = pd.read_csv(DATA_FILEPATH1, encoding='utf-8')
+    df = df.loc[df['city_id'] == city_id]
+    df2 = df2.loc[df2['city_id'] == city_id]
+    x = df['year'].tolist()
+    y = df2['pop_density'].tolist()
+    y_hat = df['yhat'].tolist()
+    y_upper = df['yhat_upper'].tolist()
+    y_lower = df['yhat_lower'].tolist()
 
-    m = Prophet()
-    m.fit(dataframe)
-    future = m.make_future_dataframe(periods=5, freq= 'y')
-    forecast = m.predict(future)
-    fig = plot_plotly(m, forecast)
+    fig = go.Figure([
+        go.Scatter(
+            x=x,
+            y=y,
+            line=dict(color='rgb(255,8,0)'),
+            mode='lines',
+            showlegend=False
+        ),
+        go.Scatter(
+            x=x,
+            y=y_hat,
+            line=dict(color='rgb(255,8,0)'),
+            mode='lines',
+            showlegend=False
+        ),
+        go.Scatter(
+            x=x+x[::-1], # x, then x reversed
+            y=y_upper+y_lower[::-1], # upper, then lower reversed
+            fill='toself',
+            fillcolor='rgba(255,8,0,0.2)',
+            line=dict(color='rgba(255,255,255,0)'),
+            hoverinfo="skip",
+            showlegend=False
+        )
+    ])
     return fig.to_json()
-
-
-
-
