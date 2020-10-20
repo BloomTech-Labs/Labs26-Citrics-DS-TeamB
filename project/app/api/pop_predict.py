@@ -11,7 +11,7 @@ DATA_FILEPATH1 = os.path.join(os.path.dirname(__file__), "..", "..","data", "his
 DATA_FILEPATH2 = os.path.join(os.path.dirname(__file__), "..", "..","data", "total_pop_predict.csv")
 DATA_FILEPATH3 = os.path.join(os.path.dirname(__file__), "..", "..","data", "pop_density_predict.csv")
 
-@router.get('/pop_predict')
+@router.get('/predict_pop/{city_id}')
 async def pop_tse(city_id: int):
     """
     Return time series estimates for total population over the next 5 years
