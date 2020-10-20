@@ -9,7 +9,7 @@ router = APIRouter()
 
 DATA_FILEPATH = os.path.join(os.path.dirname(__file__), "..", "..","data", "rental_all.csv")
 
-@router.get('/rental_viz/{city_id}')
+@router.get('/predict_rental/{city_id}')
 async def rental_viz_to_dict(city_id: int):
     """
     Rental Prediction Visualization 
