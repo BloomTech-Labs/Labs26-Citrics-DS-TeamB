@@ -34,7 +34,7 @@ async def pop_tse(city_id: int):
     rt_data_dict["state"] = rt_data[0][2]
     rt_data_dict["city_state"] = rt_data[0][3]
     
-    rt_dict["data"] = {"data":rt_data_dict}
+    rt_dict["data"] = {rt_data_dict}
     rt_dict["viz"] = {"total_pop":tot_pop_tse_viz(city_id=rt_data[0][0]),
                       "pop_density":pop_dens_tse_viz(city_id=rt_data[0][0])}
     return rt_dict
