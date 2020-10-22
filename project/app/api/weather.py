@@ -8,13 +8,19 @@ weather_data = os.path.join(os.path.dirname(__file__), "..", "..", "data", "weat
 
 @router.get('/weather/{city_id}')
 async def weather(city_id: int):
+
     """
+    
     Returns average humidity, maximum and minimum temperature of summer and winter season of a city.
     
     ### Query Parameters: 
+
     - `city_id`: [city_id], unique numeric mapping (ex: 0 returns Anchorage, AK)
+
     ### Response
+
     Dictionary object 
+
     """
 
     rt_dict = {}
