@@ -11,6 +11,7 @@ You can find the deployed project at [Citrics Team B](https://b.citrics.dev).
 - Select up to three cities to compare side-by-side
 - Dig into detailed historical information, trends (*future predictions coming soon*)
 
+#### [Walkthrough Video](https://youtu.be/ytG7onLqSOc)
 
 #### Front end deployed to `AWS Amplify`
 
